@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Regular Expression Learning Notes | Michael的技术随笔和读书笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="\d    any Digit  .    any Character  .    Period  [abc]    Only a, b, or c  [^abc]    Not a, b, nor c  [a-z]    Characters a to z  [0-9]    Numbers 0 to 9  {m}    m Repetitions  {m,n}    m to n Repet">
+<meta name="keywords" content="Technology">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Regular Expression Learning Notes">
+<meta property="og:url" content="http://michaelran16.github.io/2015/05/24/Technology/regex/index.html">
+<meta property="og:site_name" content="Michael的技术随笔和读书笔记">
+<meta property="og:description" content="\d    any Digit  .    any Character  .    Period  [abc]    Only a, b, or c  [^abc]    Not a, b, nor c  [a-z]    Characters a to z  [0-9]    Numbers 0 to 9  {m}    m Repetitions  {m,n}    m to n Repet">
+<meta property="og:locale" content="Chinese, English">
+<meta property="og:updated_time" content="2018-06-23T09:46:51.390Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Regular Expression Learning Notes">
+<meta name="twitter:description" content="\d    any Digit  .    any Character  .    Period  [abc]    Only a, b, or c  [^abc]    Not a, b, nor c  [a-z]    Characters a to z  [0-9]    Numbers 0 to 9  {m}    m Repetitions  {m,n}    m to n Repet">
+  
+    <link rel="alternate" href="/atom.xml" title="Michael的技术随笔和读书笔记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Michael的技术随笔和读书笔记</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Michael的技术随笔和读书笔记</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://michaelran16.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Technology/regex" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/05/24/Technology/regex/" class="article-date">
+  <time datetime="2015-05-23T16:00:00.000Z" itemprop="datePublished">2015-05-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Regular Expression Learning Notes
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>\d    any Digit</p>
+</li>
+<li><p>.    any Character</p>
+</li>
+<li><p>.    Period</p>
+</li>
+<li><p>[abc]    Only a, b, or c</p>
+</li>
+<li><p>[^abc]    Not a, b, nor c</p>
+</li>
+<li><p>[a-z]    Characters a to z</p>
+</li>
+<li><p>[0-9]    Numbers 0 to 9</p>
+</li>
+<li><p>{m}    m Repetitions</p>
+</li>
+<li><p>{m,n}    m to n Repetitions</p>
+<p> eg. a{1,} means <strong>&gt;=1 occurance of a</strong></p>
+</li>
+<li><p>*    Zero or more repetitions</p>
+</li>
+<li><p>+    One or more repetitions</p>
+<p> eg. [abc]+ means <strong>&gt;=1 occurance of a or b or c</strong></p>
+</li>
+<li><p>?    Optional</p>
+<p> eg. ab?c matches <strong>abc or ac</strong></p>
+</li>
+<li><p>\s    any Whitespace</p>
+</li>
+<li><p>\t    any tab</p>
+</li>
+<li><p>\n    any new line</p>
+</li>
+<li><p>^…$    Starts and ends</p>
+</li>
+<li><p>()    capture Group</p>
+</li>
+<li><p>(a(bc))    capture Sub group</p>
+<p> eg. ^(IMG\d+).png$ matches <strong>an image file name</strong></p>
+</li>
+<li><p>(.*)    capture Variable content</p>
+</li>
+<li><p>(a|b)    Matchs a or b</p>
+</li>
+<li><p>metacharacters</p>
+<ol>
+<li><p>\w    any Alphanumeric character</p>
+</li>
+<li><p>\W    any Non-alphanumeric character</p>
+</li>
+<li><p>\d    any Digit</p>
+</li>
+<li><p>\D    any Non-digit character</p>
+</li>
+<li><p>\s    any Whitespace</p>
+</li>
+<li><p>\S    any Non-whitespace character</p>
+</li>
+</ol>
+</li>
+<li><p>Last but not least: <strong>.* matches anything</strong></p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://michaelran16.github.io/2015/05/24/Technology/regex/" data-id="cjir84hse000mqj22lvqwxbsv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Technology/">Technology</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/05/31/Technology/php-learning/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          PHP learning notes
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/05/14/Technology/ssh-keys-github/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SSH keys setup for GitHub</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Technology/">Technology</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/艺术/">艺术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Technology/" style="font-size: 20px;">Technology</a> <a href="/tags/艺术/" style="font-size: 10px;">艺术</a> <a href="/tags/读书笔记/" style="font-size: 15px;">读书笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2001/01/">January 2001</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/21/知识/">知识</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/21/读书笔记/2016 摘抄/">2016 摘抄</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/31/艺术/Modern Art 2/">Modern Art and Ideas (Week 1), Art Periods</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/31/艺术/Modern Art 1/">Modern Art and Ideas (Week 1), Introduction</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/18/读书笔记/仪式感/">【摘抄】仪式感</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Michael<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Intro to Hexo | Michael的技术随笔和读书笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="This is an introduction to Hexo blogging framework, used for self references. First wordPublic repo and master branchFor GitHub pages deployment, you have to push the public folder of Hexo to the mast">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Intro to Hexo">
+<meta property="og:url" content="http://michaelran16.github.io/2001/01/01/intro-to-hexo/index.html">
+<meta property="og:site_name" content="Michael的技术随笔和读书笔记">
+<meta property="og:description" content="This is an introduction to Hexo blogging framework, used for self references. First wordPublic repo and master branchFor GitHub pages deployment, you have to push the public folder of Hexo to the mast">
+<meta property="og:locale" content="Chinese, English">
+<meta property="og:image" content="http://michaelran16.github.io/images/e7a396ad9c53636766c6d89aa840f60d.jpg">
+<meta property="og:updated_time" content="2018-06-23T09:57:16.090Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Intro to Hexo">
+<meta name="twitter:description" content="This is an introduction to Hexo blogging framework, used for self references. First wordPublic repo and master branchFor GitHub pages deployment, you have to push the public folder of Hexo to the mast">
+<meta name="twitter:image" content="http://michaelran16.github.io/images/e7a396ad9c53636766c6d89aa840f60d.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Michael的技术随笔和读书笔记" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Michael的技术随笔和读书笔记</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Michael的技术随笔和读书笔记</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://michaelran16.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-intro-to-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2001/01/01/intro-to-hexo/" class="article-date">
+  <time datetime="2001-01-01T08:11:25.000Z" itemprop="datePublished">2001-01-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Intro to Hexo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>This is an introduction to Hexo blogging framework, used for self references.</p>
+<h1 id="First-word"><a href="#First-word" class="headerlink" title="First word"></a>First word</h1><h2 id="Public-repo-and-master-branch"><a href="#Public-repo-and-master-branch" class="headerlink" title="Public repo and master branch"></a>Public repo and master branch</h2><p>For GitHub pages deployment, you have to push the <strong>public folder</strong> of Hexo to the <strong>master branch</strong> of “yourname.github.io” repo in your GitHub account. </p>
+<p>Make sure the repo name is correct. And “yourname” must match the GitHub account name. </p>
+<p>After “hexo deploy”, the changes should be reflected within 5 seconds.</p>
+<h2 id="Config-the-git-URL"><a href="#Config-the-git-URL" class="headerlink" title="Config the git URL"></a>Config the git URL</h2><p>Now edit your _config.yml</p>
+<p>You must put in the git SSH url in config file.</p>
+<h1 id="Workflow"><a href="#Workflow" class="headerlink" title="Workflow"></a>Workflow</h1><pre><code>hexo init yourname.github.io
+cd 
+npm install
+hexo server
+npm install hexo-deployer-git --save
+vi _config.yml
+hexo generate --watch
+hexo deploy
+</code></pre><p>Specifically, after you update a post, run the following:</p>
+<pre><code>hexo g
+hexo d
+Or
+hexo s
+</code></pre><p><a href="https://gist.github.com/btfak/18938572f5df000ebe06fbd1872e4e39" target="_blank" rel="noopener">https://gist.github.com/btfak/18938572f5df000ebe06fbd1872e4e39</a></p>
+<h2 id="Handle-Images"><a href="#Handle-Images" class="headerlink" title="Handle Images"></a>Handle Images</h2><p>Put all your images in “source/images” folder. Put all markdown file in “source/_posts” folder. Then your image insertion sync looks like this:</p>
+<pre><code>![](/images/e7a396ad9c53636766c6d89aa840f60d.jpg)
+</code></pre><p>Look like this: <img src="/images/e7a396ad9c53636766c6d89aa840f60d.jpg" alt=""></p>
+<h2 id="Apply-themes"><a href="#Apply-themes" class="headerlink" title="Apply themes"></a>Apply themes</h2><p>Pick a theme online, for example this one: <a href="https://github.com/stkevintan/hexo-theme-material-flow" target="_blank" rel="noopener">https://github.com/stkevintan/hexo-theme-material-flow</a></p>
+<p>Then run the following:</p>
+<pre><code>cd /your_blog_dir/
+# install dependencies
+npm i -S hexo-generator-search hexo-generator-feed hexo-renderer-less hexo-autoprefixer hexo-generator-json-content
+# download source
+git clone https://github.com/stkevintan/hexo-theme-material-flow themes/material-flow
+</code></pre><p>Lastly, change the value of theme to material-flow in _config.yml</p>
+<p>Note:</p>
+<p>  If you do not have correct theme setup, you will see black page.<br>  The ‘hexo g’ command would have error: No layout: index.html</p>
+<h2 id="Hexo-commands-abbreviation"><a href="#Hexo-commands-abbreviation" class="headerlink" title="Hexo commands abbreviation"></a>Hexo commands abbreviation</h2><pre><code>hexo n == hexo new
+hexo g == hexo generate
+hexo s == hexo server
+hexo d == hexo deploy
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://michaelran16.github.io/2001/01/01/intro-to-hexo/" data-id="cjir84hro0000qj2225nli89z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2012/02/15/墨菲定理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          墨菲定理
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Technology/">Technology</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/艺术/">艺术</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书笔记/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Technology/" style="font-size: 20px;">Technology</a> <a href="/tags/艺术/" style="font-size: 10px;">艺术</a> <a href="/tags/读书笔记/" style="font-size: 15px;">读书笔记</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">September 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">August 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/05/">May 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/09/">September 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02/">February 2012</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2001/01/">January 2001</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/05/21/知识/">知识</a>
+          </li>
+        
+          <li>
+            <a href="/2016/11/21/读书笔记/2016 摘抄/">2016 摘抄</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/31/艺术/Modern Art 2/">Modern Art and Ideas (Week 1), Art Periods</a>
+          </li>
+        
+          <li>
+            <a href="/2016/07/31/艺术/Modern Art 1/">Modern Art and Ideas (Week 1), Introduction</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/18/读书笔记/仪式感/">【摘抄】仪式感</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 Michael<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
